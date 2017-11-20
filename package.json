@@ -8,7 +8,8 @@
     "npm": "5.5.1"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "Shekeb Roya",
   "license": "ISC",
@@ -16,5 +17,8 @@
     "express": "^4.16.2",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
   }
 }
