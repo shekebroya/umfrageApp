@@ -17,7 +17,13 @@ passport.use(
       //console.log('refeshToken: ', refeshToken);
       //console.log('profile: ', profile);
       //console.log('done: ', done);
-      new User({ googleId: profile.id }).save();
+      User.findOne({ googleId.profile.id }).then(existingUser => {
+        if(existingUser) {
+
+        }else {
+            new User({ googleId: profile.id }).save();
+        }
+      })
     }
   )
 );
