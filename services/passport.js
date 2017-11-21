@@ -13,17 +13,15 @@ passport.use(
       callbackURL: '/auth/google/callback'
     },
     (accessToken, refeshToken, profile, done) => {
-      //console.log('accessToken: ', accessToken);
-      //console.log('refeshToken: ', refeshToken);
-      //console.log('profile: ', profile);
-      //console.log('done: ', done);
-      User.findOne({ googleId.profile.id }).then(existingUser => {
-        if(existingUser) {
-
-        }else {
-            new User({ googleId: profile.id }).save();
+      User.findOne({ googleId: profile.id }).then(existingUser => {
+        if (existingUser) {
+          done(null, existingUser);
+        } else {
+          new User({ googleId: profile.id })
+            .save()
+            .then(user => done(null, user));
         }
-      })
+      });
     }
   )
 );
