@@ -10,7 +10,7 @@ const app = express();
 
 app.use(
   cookieSession({
-    // 30 days
+    // 30 Tage
     maxAge: 30 * 24 * 60 * 60 * 1000,
     keys: [keys.cookieKey]
   })
@@ -18,6 +18,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+// verbinde mongoose mit mongoDB
 mongoose.connect(keys.mongoURI);
 
 require('./routes/authRoutes')(app);

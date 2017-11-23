@@ -1,8 +1,10 @@
 const passport = require('passport');
+// Strategy kann ausgewechselt werden mit z.B. facebook, github, ...
 const googleStrategy = require('passport-google-oauth20').Strategy;
 const mongoose = require('mongoose');
 const keys = require('../config/keys');
 
+// User = modelClass mit einem collection von user
 const User = mongoose.model('users');
 
 passport.serializeUser((user, done) => {
@@ -15,12 +17,13 @@ passport.deserializeUser((id, done) => {
 });
 
 passport.use(
+  // Strategy kann ausgewechselt werden mit z.B. facebook, github, ...
   new googleStrategy(
     {
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
       callbackURL: '/auth/google/callback',
-      proxy: true
+      proxy: true // wichtig für https://
     },
     (accessToken, refeshToken, profile, done) => {
       User.findOne({ googleId: profile.id }).then(existingUser => {
