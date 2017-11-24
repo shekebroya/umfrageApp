@@ -1,10 +1,10 @@
 const passport = require('passport');
-// Strategy kann ausgewechselt werden mit z.B. facebook, github, ...
+// Strategy "passport-google-oauth20" kann ausgewechselt werden mit z.B. facebook, github, ...
 const googleStrategy = require('passport-google-oauth20').Strategy;
 const mongoose = require('mongoose');
 const keys = require('../config/keys');
 
-// User = modelClass mit einem collection von user
+// User = modelClass mit einem collection von user namens users
 const User = mongoose.model('users');
 
 passport.serializeUser((user, done) => {
