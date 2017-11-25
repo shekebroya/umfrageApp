@@ -1,0 +1,156 @@
+@mixin transition-transform($duration, $timing, $delay:0s, $preface:webkit moz ms o spec) {
+  @each $browser in $preface {
+    @if ($browser == spec) {
+      transition: transform $duration $timing $delay;
+    } @else {
+      -#{$browser}-transition: -#{$browser}-transform $duration $timing $delay;
+    }
+  }
+}
+@mixin transition-transform2($duration, $timing, $delay:0s, $preface:webkit moz ms o spec) {
+  @each $browser in $preface {
+    @if ($browser == spec) {
+      transition: transform $duration $timing $delay;
+    } @else {
+      -#{$browser}-transition: -#{$browser}-transform $duration $timing $delay;
+    }
+  }
+}
+
+@mixin rotate($prop) {
+  -webkit-transform: rotate($prop);
+  -moz-transform: rotate($prop);
+  -o-transform: rotate($prop);
+  -ms-transform: rotate($prop);
+  transform: rotate($prop);
+}
+
+@mixin transition($prop, $time, $ease, $delay) {
+  -webkit-transition: $prop $time $ease $delay;
+  -moz-transition: $prop $time $ease $delay;
+  -o-transition: $prop $time $ease $delay;
+  -ms-transition: $prop $time $ease $delay;
+  transition: $prop $time $ease $delay;
+}
+@mixin transition2($prop, $time, $ease, $delay, $prop1, $time1, $ease1, $delay1) {
+  -webkit-transition: $prop $time $ease $delay, $prop1 $time1 $ease1 $delay1;
+  -moz-transition: $prop $time $ease $delay, $prop1 $time1 $ease1 $delay1;
+  -o-transition: $prop $time $ease $delay, $prop1 $time1 $ease1 $delay1;
+  -ms-transition: $prop $time $ease $delay, $prop1 $time1 $ease1 $delay1;
+  transition: $prop $time $ease $delay, $prop1 $time1 $ease1 $delay1;
+}
+@mixin transition3($prop, $time, $ease, $delay, $prop1, $time1, $ease1, $delay1, $prop2, $time2, $ease2, $delay2) {
+  -webkit-transition: $prop $time $ease $delay, $prop1 $time1 $ease1 $delay1,
+    $prop2 $time2 $ease2 $delay2;
+  -moz-transition: $prop $time $ease $delay, $prop1 $time1 $ease1 $delay1,
+    $prop2 $time2 $ease2 $delay2;
+  -o-transition: $prop $time $ease $delay, $prop1 $time1 $ease1 $delay1,
+    $prop2 $time2 $ease2 $delay2;
+  -ms-transition: $prop $time $ease $delay, $prop1 $time1 $ease1 $delay1,
+    $prop2 $time2 $ease2 $delay2;
+  transition: $prop $time $ease $delay, $prop1 $time1 $ease1 $delay1,
+    $prop2 $time2 $ease2 $delay2;
+}
+
+// Flexbox display
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+// <positive-number>, initial, auto, or none
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex: $values;
+  -webkit-flex: $values;
+  -ms-flex: $values;
+  flex: $values;
+}
+// row | row-reverse | column | column-reverse
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+// nowrap | wrap | wrap-reverse
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+  -moz-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+// <flex-direction> || <flex-wrap>
+@mixin flex-flow($flow) {
+  -webkit-flex-flow: $flow;
+  -moz-flex-flow: $flow;
+  -ms-flex-flow: $flow;
+  flex-flow: $flow;
+}
+// <integer>
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+// <number>
+@mixin flex-grow($grow) {
+  -webkit-flex-grow: $grow;
+  -moz-flex-grow: $grow;
+  -ms-flex-grow: $grow;
+  flex-grow: $grow;
+}
+
+// <number>
+@mixin flex-shrink($shrink) {
+  -webkit-flex-shrink: $shrink;
+  -moz-flex-shrink: $shrink;
+  -ms-flex-shrink: $shrink;
+  flex-shrink: $shrink;
+}
+
+// <width>
+@mixin flex-basis($width) {
+  -webkit-flex-basis: $width;
+  -moz-flex-basis: $width;
+  -ms-flex-basis: $width;
+  flex-basis: $width;
+}
+
+// flex-start | flex-end | center | space-between | space-around
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  justify-content: $justify;
+  -ms-flex-pack: $justify;
+}
+
+// flex-start | flex-end | center | space-between | space-around | stretch
+@mixin align-content($align) {
+  -webkit-align-content: $align;
+  -moz-align-content: $align;
+  -ms-align-content: $align;
+  align-content: $align;
+}
+
+// flex-start | flex-end | center | baseline | stretch
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+  -moz-align-items: $align;
+  -ms-align-items: $align;
+  align-items: $align;
+}
+
+// auto | flex-start | flex-end | center | baseline | stretch
+@mixin align-self($align) {
+  -webkit-align-self: $align;
+  -moz-align-self: $align;
+  -ms-align-self: $align;
+  align-self: $align;
+}
