@@ -16,7 +16,13 @@
     }
   }
 }
-
+@mixin blur($prop) {
+  -webkit-filter: blur($prop);
+  -moz-filter: blur($prop);
+  -o-filter: blur($prop);
+  -ms-filter: blur($prop);
+  filter: blur($prop);
+}
 @mixin rotate($prop) {
   -webkit-transform: rotate($prop);
   -moz-transform: rotate($prop);

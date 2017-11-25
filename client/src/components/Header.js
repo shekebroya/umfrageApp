@@ -4,7 +4,7 @@ import './Header.css'; // Tell Webpack that Header.js uses these styles
 class Header extends Component {
   render() {
     return (
-      <div className="header">
+      <div className="header gradient">
         <div className="container">
           <div className="row">
             <div className="header__logo col s4">
@@ -14,7 +14,9 @@ class Header extends Component {
               </a>
             </div>
             <ul className="header__navigation col s8">
-              <li>Login to google</li>
+              <li>
+                <a href="#">Sign in</a>
+              </li>
             </ul>
           </div>
         </div>

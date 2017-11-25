@@ -1,0 +1,23 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.gradient {
+  opacity: 0.6;
+  background: $grey;
+  background: -moz-linear-gradient(45deg, $grey 0%, $blue 100%);
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    right top,
+    color-stop(0%, $grey),
+    color-stop(100%, $blue)
+  );
+  background: -webkit-linear-gradient(45deg, $grey 0%, $blue 100%);
+  background: -o-linear-gradient(45deg, $grey 0%, $blue 100%);
+  background: -ms-linear-gradient(45deg, $grey 0%, $blue 100%);
+  background: linear-gradient(45deg, $grey 0%, $blue 100%);
+}
+
+.blurry {
+  @include blur(5px);
+}

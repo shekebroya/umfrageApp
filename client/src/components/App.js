@@ -9,17 +9,15 @@ const Footer = () => <h1>Footer</h1>;
 
 const App = () => {
   return (
-    <div>
-      <BrowserRouter>
-        <div>
-          <Header />
-          <Route exact path="/" component={Landingpage} />
-          <Route exact path="/umfragen" component={Dashboard} />
-          <Route path="/umfragen/neue-umfrage" component={FeedbackNew} />
-          <Footer />
-        </div>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <div className="main">
+        <Header />
+        <Route exact path="/" component={Landingpage} />
+        <Route exact path="/umfragen" component={Dashboard} />
+        <Route path="/umfragen/neue-umfrage" component={FeedbackNew} />
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 };
 

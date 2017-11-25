@@ -1,6 +1,19 @@
-@import 'styles/_variables.scss';
-@import 'styles/_mixin.scss';
+@import 'styles/styles.scss';
 
 .header {
-  background-color: $green;
+  color: $white;
+  a {
+    color: $white;
+    opacity: 1;
+    @include transition(opacity, 0.2s, ease-in-out, 0s);
+  }
+  a:hover {
+    opacity: 0.6;
+  }
+}
+.header__navigation {
+  text-align: right;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 35px;
 }
