@@ -1,0 +1,16 @@
+@import 'styles/styles.scss';
+
+.footer {
+  color: $white;
+  a {
+    color: $white;
+    opacity: 1;
+    @include transition(opacity, 0.2s, ease-in-out, 0s);
+  }
+  a:hover {
+    opacity: 0.6;
+  }
+  .row {
+    margin-bottom: 0;
+  }
+}
