@@ -1,8 +1,28 @@
 import React, { Component } from 'react';
-import './Header.css'; // Tell Webpack that Header.js uses these styles
+import './Header.css'; // Tells Webpack that Header.js uses these styles
+import { connect } from 'react-redux';
 
 class Header extends Component {
+  renderContent() {
+    switch (this.props.auth) {
+      case null:
+        return;
+      case false:
+        return (
+          <li>
+            <a href="/auth/google">Sign in</a>
+          </li>
+        );
+      default:
+        return (
+          <li>
+            <a href="/api/logout">Logout</a>
+          </li>
+        );
+    }
+  }
   render() {
+    console.log(this.props);
     return (
       <div className="header gradient">
         <div className="container">
@@ -14,9 +34,7 @@ class Header extends Component {
               </a>
             </div>
             <ul className="header__navigation col s8">
-              <li>
-                <a href="">Sign in</a>
-              </li>
+              {this.renderContent()}
             </ul>
           </div>
         </div>
@@ -25,4 +43,8 @@ class Header extends Component {
   }
 }
 
-export default Header;
+function mapStateToProps({ auth }) {
+  return { auth };
+}
+
+export default connect(mapStateToProps)(Header);
