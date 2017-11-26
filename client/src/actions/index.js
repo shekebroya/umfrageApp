@@ -7,5 +7,5 @@ export const fetchUser = () =>
   // Versende eine action nachdem "axios.get('/api/current_user')" action vervollständigt wurde.
   async dispatch => {
     const res = await axios.get('/api/current_user');
-    dispatch({ type: FETCH_USER, payload: res }); // Respond (res) erst jetzt wird die Action versendet.
+    dispatch({ type: FETCH_USER, payload: res.data }); // (res ist die Ausgabe von axios (Backend-server)) erst jetzt wird die Action versendet.
   };
