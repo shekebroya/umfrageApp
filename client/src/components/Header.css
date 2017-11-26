@@ -27,6 +27,8 @@
     transition: opacity 0.2s ease-in-out 0s; }
   .header a:hover {
     opacity: 0.6; }
+  .header .row {
+    margin-bottom: 0; }
 
 .header__navigation {
   text-align: right;

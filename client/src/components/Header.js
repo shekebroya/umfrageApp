@@ -15,7 +15,7 @@ class Header extends Component {
             </div>
             <ul className="header__navigation col s8">
               <li>
-                <a href="#">Sign in</a>
+                <a href="">Sign in</a>
               </li>
             </ul>
           </div>
