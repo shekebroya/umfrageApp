@@ -4,7 +4,11 @@ const { Schema } = mongoose;
 
 const userSchema = new Schema({
   // alle user haben einen google-id als string
-  googleId: String
+  googleId: String,
+  firstname: String,
+  gender: String,
+  picture: String,
+  emails: Object
 });
 // erstelle eine kollektion von users
 mongoose.model('users', userSchema);

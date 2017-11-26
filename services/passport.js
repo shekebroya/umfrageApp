@@ -26,11 +26,19 @@ passport.use(
       proxy: true // wichtig für https://
     },
     async (accessToken, refeshToken, profile, done) => {
-      const existingUser = await User.findOne({ googleId: profile.id });
+      const existingUser = await User.findOne({
+        googleId: profile.id
+      });
       if (existingUser) {
         return done(null, existingUser);
       }
-      const user = await new User({ googleId: profile.id }).save();
+      const user = await new User({
+        googleId: profile.id,
+        firstname: profile.displayName,
+        gender: profile.gender,
+        picture: profile.picture,
+        emails: profile.emails
+      }).save();
       done(null, user);
     }
   )
