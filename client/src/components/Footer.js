@@ -27,7 +27,10 @@ class Footer extends Component {
             </div>
             <div className="col m3 s6">{this.props.auth.gender}</div>
             <div className="col m3 s6">
-              <img src={this.props.auth.picture} />
+              <img
+                src={this.props.auth.picture}
+                alt={this.props.auth.firstname}
+              />
             </div>
           </div>
         );
