@@ -22,7 +22,9 @@ app.use(passport.session());
 // verbinde mongoose mit mongoDB
 mongoose.connect(keys.mongoURI);
 
+// Routes
 require('./routes/authRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 // Routes for production Online
 if (process.env.NODE_ENV) {
