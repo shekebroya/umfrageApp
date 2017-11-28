@@ -23,7 +23,7 @@ class Footer extends Component {
               <h4>{this.props.auth.firstname}</h4>
             </div>
             <div className="col m3 s6">
-              <p>email</p>
+              <p>email: {this.props.auth.emails.value}</p>
             </div>
             <div className="col m3 s6">{this.props.auth.gender}</div>
             <div className="col m3 s6">

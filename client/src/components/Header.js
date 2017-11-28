@@ -31,7 +31,6 @@ class Header extends Component {
               <Link
                 to={this.props.auth ? '/umfragen' : '/'}
                 className="header__logo__link"
-                href=""
               >
                 UM<i className="medium">frage</i>
                 <i className="small">?!</i>
