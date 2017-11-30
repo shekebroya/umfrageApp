@@ -12,8 +12,7 @@
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild":
-      "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "Shekeb Roya",
   "license": "ISC",
@@ -24,7 +23,8 @@
     "mongoose": "^4.13.4",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^1.0.0",
-    "save": "^2.3.1"
+    "save": "^2.3.1",
+    "sendgrid": "^5.2.3"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
