@@ -10,7 +10,7 @@ module.exports = app => {
     res.send('Vielen Dank für das Abstimmen der Umfrage!');
   });
 
-  app.post('/api/umfragen', requireLogin, async (req, res) => {
+  app.post('/api/umfrage', requireLogin, async (req, res) => {
     const { title, subject, body, recipients } = req.body;
 
     const survey = new Survey({

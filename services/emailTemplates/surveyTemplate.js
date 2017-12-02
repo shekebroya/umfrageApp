@@ -21,7 +21,10 @@ module.exports = survey => {
 
     /* ========== Page Styles ========== */
     #bodyCell{padding:20px;}
-    #templateContainer{width:600px;}
+    #templateContainer{
+      width:600px;
+      border: 3px solid #ffffff;
+    }
 
     body, #bodyTable{
        background-color:#82c4d4;
@@ -287,7 +290,7 @@ module.exports = survey => {
                                 <!-- BEGIN FOOTER // -->
                                   <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
                                       <tr>
-                                          <td valign="top" class="footerContent" style="padding-top:0;" mc:edit="footer_content01">
+                                          <td valign="top" class="footerContent" mc:edit="footer_content01">
                                               <em>Copyright &copy; 2017 https://arcane-river-96772.herokuapp.com, All rights reserved.</em>
                                               <br />
                                               Umfrage-App ist ein einfaches Tool zur Erstellung von Umfragen. Die erstellten Umfragen werden per Mail versendet. Die Antworten werden gespeichert, ausgewertet und grafisch dargestellt.

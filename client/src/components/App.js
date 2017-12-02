@@ -6,7 +6,7 @@ import * as actions from '../actions';
 import Header from './Header';
 import Landingpage from './Landingpage';
 import Dashboard from './Dashboard';
-import FeedbackNew from './FeedbackNew';
+import SurveyNew from './surveys/SurveyNew';
 import Footer from './Footer';
 
 class App extends Component {
@@ -21,7 +21,7 @@ class App extends Component {
           <Header />
           <Route exact path="/" component={Landingpage} />
           <Route exact path="/umfragen" component={Dashboard} />
-          <Route path="/umfragen/neue-umfrage" component={FeedbackNew} />
+          <Route path="/umfragen/neue-umfrage" component={SurveyNew} />
           <Footer />
         </div>
       </BrowserRouter>
