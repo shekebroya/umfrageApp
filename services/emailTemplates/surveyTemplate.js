@@ -1,3 +1,5 @@
+const keys = require('../../config/keys');
+
 module.exports = survey => {
   return `
   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -268,8 +270,12 @@ module.exports = survey => {
                                               <br />
                                               <br />
                                               <h2>${survey.title}</h2>
-                                              <div><a href="http://localhost:3000">ja</a></div>
-                                              <div><a href="http://localhost:3000">nein</a></div>
+                                              <div><a href="${
+                                                keys.redirectDomain
+                                              }/api/feedback/danke">ja</a></div>
+                                              <div><a href="${
+                                                keys.redirectDomain
+                                              }/api/feedback/danke">nein</a></div>
                                           </td>
                                       </tr>
                                   </table>
