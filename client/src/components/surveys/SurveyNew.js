@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SurveyForm from './SurveyForm';
 
 class SurveyNew extends Component {
   render() {
@@ -7,7 +8,7 @@ class SurveyNew extends Component {
         <div className="container">
           <div className="row">
             <div className="col s12">
-              <h1>Neue Umfrage</h1>
+              <SurveyForm />
             </div>
           </div>
         </div>
