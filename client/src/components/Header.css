@@ -30,8 +30,35 @@
   .header .row {
     margin-bottom: 0; }
 
+.header__logo__link {
+  float: left; }
+
 .header__navigation {
-  text-align: right;
+  text-align: right; }
+
+.header__authentication {
+  float: right;
+  width: 200px; }
+  .header__authentication div {
+    float: right; }
+  .header__authentication div:last-child {
+    margin-right: 10px; }
+  .header__authentication span {
+    display: block; }
+  .header__authentication i.medium {
+    font-size: 3rem; }
+
+.logged-in {
+  margin-top: 8px; }
+  .logged-in span:first-child {
+    font-size: 12px;
+    padding-top: 2px; }
+
+.logged-out {
+  margin-top: 15px; }
+  .logged-out span {
+    padding-top: 5px; }
+
+.bold-upper {
   font-weight: bold;
-  text-transform: uppercase;
-  margin-top: 35px; }
+  text-transform: uppercase; }

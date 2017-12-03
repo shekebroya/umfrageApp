@@ -14,9 +14,43 @@
     margin-bottom: 0;
   }
 }
+.header__logo__link {
+  float: left;
+}
 .header__navigation {
   text-align: right;
+}
+.header__authentication {
+  float: right;
+  width: 200px;
+  div {
+    float: right;
+  }
+  div:last-child {
+    margin-right: 10px;
+  }
+  span {
+    display: block;
+  }
+  i.medium {
+    font-size: 3rem;
+  }
+}
+.logged-in {
+  margin-top: 8px;
+
+  span:first-child {
+    font-size: 12px;
+    padding-top: 2px;
+  }
+}
+.logged-out {
+  margin-top: 15px;
+  span {
+    padding-top: 5px;
+  }
+}
+.bold-upper {
   font-weight: bold;
   text-transform: uppercase;
-  margin-top: 35px;
 }

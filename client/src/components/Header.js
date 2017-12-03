@@ -11,13 +11,31 @@ class Header extends Component {
       case false:
         return (
           <li>
-            <a href="/auth/google">Sign in</a>
+            <a
+              className="header__authentication logged-out"
+              href="/auth/google"
+            >
+              <div>
+                <i className="material-icons small">fingerprint</i>
+              </div>
+              <div>
+                <span className="bold-upper">Sign in</span>
+              </div>
+            </a>
           </li>
         );
       default:
         return (
           <li>
-            <a href="/api/logout">Logout</a>
+            <a className="header__authentication logged-in" href="/api/logout">
+              <div>
+                <i className="material-icons medium">face</i>
+              </div>
+              <div>
+                <span>{this.props.auth.firstname}</span>
+                <span className="bold-upper">Logout</span>
+              </div>
+            </a>
           </li>
         );
     }
