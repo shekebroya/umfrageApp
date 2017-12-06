@@ -1,0 +1,65 @@
+.gradient {
+  opacity: 0.6;
+  background: #15a29d;
+  background: -moz-linear-gradient(45deg, #15a29d 0%, #0088bc 100%);
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #15a29d), color-stop(100%, #0088bc));
+  background: -webkit-linear-gradient(45deg, #15a29d 0%, #0088bc 100%);
+  background: -o-linear-gradient(45deg, #15a29d 0%, #0088bc 100%);
+  background: -ms-linear-gradient(45deg, #15a29d 0%, #0088bc 100%);
+  background: linear-gradient(45deg, #15a29d 0%, #0088bc 100%); }
+
+.blurry {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px); }
+
+.content {
+  margin: 35px 0; }
+
+h1 {
+  font-size: 2.92rem;
+  line-height: 110%;
+  margin: 1.46rem 0 1.168rem 0; }
+
+form {
+  margin: 55px 0 20px; }
+
+input:not([type]),
+input[type='text']:not(.browser-default),
+input[type='password']:not(.browser-default),
+input[type='email']:not(.browser-default),
+input[type='url']:not(.browser-default),
+input[type='time']:not(.browser-default),
+input[type='date']:not(.browser-default),
+input[type='datetime']:not(.browser-default),
+input[type='datetime-local']:not(.browser-default),
+input[type='tel']:not(.browser-default),
+input[type='number']:not(.browser-default),
+input[type='search']:not(.browser-default),
+textarea.materialize-textarea {
+  margin: 0 0 3rem 0; }
+
+input:not([type]):focus:not([readonly]),
+input[type='text']:not(.browser-default):focus:not([readonly]),
+input[type='password']:not(.browser-default):focus:not([readonly]),
+input[type='email']:not(.browser-default):focus:not([readonly]),
+input[type='url']:not(.browser-default):focus:not([readonly]),
+input[type='time']:not(.browser-default):focus:not([readonly]),
+input[type='date']:not(.browser-default):focus:not([readonly]),
+input[type='datetime']:not(.browser-default):focus:not([readonly]),
+input[type='datetime-local']:not(.browser-default):focus:not([readonly]),
+input[type='tel']:not(.browser-default):focus:not([readonly]),
+input[type='number']:not(.browser-default):focus:not([readonly]),
+input[type='search']:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #0088bc;
+  -webkit-box-shadow: 0 1px 0 0 #0088bc;
+  box-shadow: 0 1px 0 0 #0088bc; }
+
+textarea.materialize-textarea {
+  padding: 10px 0 0; }
+
+.material-tooltip .backdrop {
+  background-color: rgba(21, 162, 157, 0.6); }

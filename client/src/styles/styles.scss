@@ -21,3 +21,11 @@
 .blurry {
   @include blur(5px);
 }
+.content {
+  margin: 35px 0;
+}
+h1 {
+  font-size: 2.92rem;
+  line-height: 110%;
+  margin: 1.46rem 0 1.168rem 0;
+}

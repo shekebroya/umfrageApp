@@ -11,7 +11,7 @@ class Dashboard extends Component {
             <div className="fixed-action-btn">
               <Link
                 to="/umfragen/neue-umfrage"
-                className="btn-floating btn-large blue"
+                className="btn-floating btn-large gradient"
               >
                 <i className="large material-icons">add</i>
               </Link>

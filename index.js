@@ -13,8 +13,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(
   cookieSession({
-    // 30 Tage
-    maxAge: 30 * 24 * 60 * 60 * 1000,
+    // 1 Tag = 1 * 24 * 60 * 60 * 1000
+    maxAge: 1 * 24 * 60 * 60 * 1000,
     keys: [keys.cookieKey]
   })
 );
