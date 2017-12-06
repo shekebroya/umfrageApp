@@ -10,7 +10,6 @@ export default ({ input, label, className, type, toolTip }) => {
           className="material-icons tooltipped"
           data-position="right"
           data-delay="50"
-          data-background-color="red lighten-3"
           data-tooltip={toolTip}
         >
           info_outline

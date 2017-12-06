@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 import SurveyFieldInput from './SurveyFieldInput';
-import SurveyFieldTextarea from './SurveyFieldTextarea'; //name always undefined
+import SurveyFieldTextarea from './SurveyFieldTextarea';
 import './SurveyForm.css';
 
 class SurveyForm extends Component {
