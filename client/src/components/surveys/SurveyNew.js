@@ -6,11 +6,7 @@ class SurveyNew extends Component {
     return (
       <div className="content">
         <div className="container">
-          <div className="row">
-            <div className="col s12">
-              <SurveyForm />
-            </div>
-          </div>
+          <SurveyForm />
         </div>
       </div>
     );
