@@ -109,5 +109,12 @@ form label {
   transition: opacity 0.5s ease-in-out 0s, min-height 0.5s ease-in-out 0s; }
 
 .form-field .error-message {
+  color: red;
   opacity: 1;
   min-height: 20px; }
+
+.form-field input.error,
+.form-field textarea.error {
+  border-color: red;
+  -webkit-box-shadow: 0 1px 0 0 red;
+  box-shadow: 0 1px 0 0 red; }

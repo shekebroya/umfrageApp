@@ -1,4 +1,8 @@
+import './styles/fonts.css';
 import 'materialize-css/dist/css/materialize.min.css';
+import './styles/styles.css';
+import 'jquery/dist/jquery.min.js';
+import 'materialize-css/dist/js/materialize.min.js';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';

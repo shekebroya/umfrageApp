@@ -13,7 +13,12 @@ export default ({ input, label, type, toolTip, meta: { error, touched } }) => {
         >
           info_outline
         </i>
-        <input id={input.name} type={type} {...input} />
+        <input
+          className={touched && error ? 'error' : ''}
+          id={input.name}
+          type={type}
+          {...input}
+        />
         <span className="error-message">{touched && error}</span>
       </div>
     </div>

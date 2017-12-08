@@ -22,7 +22,7 @@ export default ({
         </i>
         <textarea
           id={input.name}
-          className={className}
+          className={className + ' ' + (touched && error ? 'error' : '')}
           type={type}
           {...input}
         />
