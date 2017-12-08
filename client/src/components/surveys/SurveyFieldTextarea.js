@@ -26,7 +26,7 @@ export default ({
           type={type}
           {...input}
         />
-        <span>{touched && error}</span>
+        <span className="error-message">{touched && error}</span>
       </div>
     </div>
   );

@@ -12,14 +12,14 @@ class SurveyForm extends Component {
         <div className="row">
           <Field
             label="Titel"
-            toolTip="My Seconds tootip ever"
+            toolTip="Titel der Umfrage erscheint im Inhalte des E-Mails."
             type="text"
             name="title"
             component={SurveyFieldInput}
           />
           <Field
             label="Thematik"
-            toolTip="My Seconds tootip ever"
+            toolTip="Betreff des E-Mails mit dem Titel der Umfrage"
             type="text"
             name="subject"
             component={SurveyFieldInput}
@@ -28,7 +28,7 @@ class SurveyForm extends Component {
         <div className="row">
           <Field
             label="Beschreibung"
-            toolTip="My Seconds tootip ever"
+            toolTip="Eine Einleitung mit der Begründung, warum die Umfrage durchgeführt wird (Ziel). Die Entscheidungsfrage und Verabschiedung/Danksagung/Wertschätzung"
             className="materialize-textarea"
             type="text"
             name="body"
@@ -36,7 +36,7 @@ class SurveyForm extends Component {
           />
           <Field
             label="Empfänger E-Mail Adressen"
-            toolTip="My first tootip ever"
+            toolTip="Wer soll an der Umfrage teilnehmen? E-Mail Adressen mit ',' separieren."
             className="materialize-textarea"
             type="text"
             name="recipients"
@@ -94,6 +94,15 @@ function validate(values) {
 
   if (!values.title) {
     errors.title = 'Titel ist ein Pflichtfeld.';
+  }
+  if (!values.subject) {
+    errors.subject = 'Thematik ist ein Pflichtfeld.';
+  }
+  if (!values.body) {
+    errors.body = 'Beschreibung ist ein Pflichtfeld.';
+  }
+  if (!values.recipients) {
+    errors.recipients = 'Empfänger Email ist ein Pflichtfeld.';
   }
 
   return errors;
