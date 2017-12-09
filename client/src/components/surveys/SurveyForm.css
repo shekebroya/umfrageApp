@@ -111,6 +111,7 @@ form label {
 .form-field .error-message {
   color: red;
   opacity: 1;
+  font-size: 12px;
   min-height: 20px; }
 
 .form-field input.error,

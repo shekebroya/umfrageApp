@@ -1,9 +1,10 @@
+import './SurveyForm.css';
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 import { Link } from 'react-router-dom';
 import SurveyFieldInput from './SurveyFieldInput';
 import SurveyFieldTextarea from './SurveyFieldTextarea';
-import './SurveyForm.css';
+import validateEmails from '../../utils/validateEmails';
 
 class SurveyForm extends Component {
   renderFields() {
@@ -12,14 +13,14 @@ class SurveyForm extends Component {
         <div className="row">
           <Field
             label="Titel"
-            toolTip="Titel der Umfrage erscheint im Inhalte des E-Mails."
+            toolTip="Titel erscheint im Inhalte des E-Mails."
             type="text"
             name="title"
             component={SurveyFieldInput}
           />
           <Field
             label="Thematik"
-            toolTip="Betreff des E-Mails mit dem Titel der Umfrage"
+            toolTip="Betreff des E-Mails."
             type="text"
             name="subject"
             component={SurveyFieldInput}
@@ -28,7 +29,7 @@ class SurveyForm extends Component {
         <div className="row">
           <Field
             label="Beschreibung"
-            toolTip="Eine Einleitung mit der Begründung, warum die Umfrage durchgeführt wird (Ziel). Die Entscheidungsfrage und Verabschiedung/Danksagung/Wertschätzung"
+            toolTip="Begründung, warum die Umfrage durchgeführt wird (Ziel)."
             className="materialize-textarea"
             type="text"
             name="body"
@@ -91,6 +92,8 @@ class SurveyForm extends Component {
 
 function validate(values) {
   const errors = {};
+
+  errors.recipients = validateEmails(values.recipients || '');
 
   if (!values.title) {
     errors.title = 'Titel ist ein Pflichtfeld.';
