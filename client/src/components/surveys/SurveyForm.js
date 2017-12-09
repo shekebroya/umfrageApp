@@ -49,7 +49,7 @@ class SurveyForm extends Component {
   }
   render() {
     return (
-      <div className="umfrage-formular">
+      <div className="container">
         <div className="title">
           <div className="row">
             <div className="col s12">
@@ -61,7 +61,7 @@ class SurveyForm extends Component {
             </div>
           </div>
         </div>
-        <form onSubmit={this.props.handleSubmit(values => console.log(values))}>
+        <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
           {this.renderFields()}
           <div className="form-buttons">
             <div className="row">
