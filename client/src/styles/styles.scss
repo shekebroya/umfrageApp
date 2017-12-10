@@ -3,29 +3,71 @@
 
 .gradient {
   opacity: 0.6;
-  background: $grey;
-  background: -moz-linear-gradient(45deg, $grey 0%, $blue 100%);
+  background: $dark-blue;
+  background: -moz-linear-gradient(45deg, $dark-blue 0%, $blue 100%);
   background: -webkit-gradient(
     linear,
     left bottom,
     right top,
-    color-stop(0%, $grey),
+    color-stop(0%, $dark-blue),
     color-stop(100%, $blue)
   );
-  background: -webkit-linear-gradient(45deg, $grey 0%, $blue 100%);
-  background: -o-linear-gradient(45deg, $grey 0%, $blue 100%);
-  background: -ms-linear-gradient(45deg, $grey 0%, $blue 100%);
-  background: linear-gradient(45deg, $grey 0%, $blue 100%);
+  background: -webkit-linear-gradient(45deg, $dark-blue 0%, $blue 100%);
+  background: -o-linear-gradient(45deg, $dark-blue 0%, $blue 100%);
+  background: -ms-linear-gradient(45deg, $dark-blue 0%, $blue 100%);
+  background: linear-gradient(45deg, $dark-blue 0%, $blue 100%);
 }
-
+.btn-flat {
+  color: #ffffff;
+}
+.btn:hover,
+.btn-flat:hover,
+.btn-large:hover,
+.btn:focus,
+.btn-large:focus,
+.btn-floating:focus {
+  background-color: $darkest-blue;
+}
+.z-depth-1,
+nav,
+.card-panel,
+.card,
+.toast,
+.btn,
+.btn-large,
+.btn-floating,
+.dropdown-content,
+.collapsible,
+.side-nav {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+.z-depth-1-half,
+.btn:hover,
+.btn-large:hover,
+.btn-floating:hover {
+  -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14),
+    0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -1px rgba(0, 0, 0, 0.2);
+}
 .blurry {
   @include blur(5px);
 }
 .content {
+  position: relative;
   margin: 35px 0;
+}
+.dark-blue {
+  background-color: $dark-blue;
 }
 h1 {
   font-size: 2.92rem;
   line-height: 110%;
   margin: 1.46rem 0 1.168rem 0;
+}
+h4 {
+  font-size: 1.8rem;
 }

@@ -1,6 +1,8 @@
-@import 'styles/styles.scss';
+@import 'styles/_mixin.scss';
+@import 'styles/_variables.scss';
 
 .header {
+  background-color: $blue;
   color: $white;
   a {
     color: $white;

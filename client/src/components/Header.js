@@ -42,7 +42,7 @@ class Header extends Component {
   }
   render() {
     return (
-      <div className="header gradient">
+      <div className="header">
         <div className="container">
           <div className="row">
             <div className="header__logo col s4">

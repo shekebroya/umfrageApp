@@ -1,27 +1,5 @@
-.gradient {
-  opacity: 0.6;
-  background: #15a29d;
-  background: -moz-linear-gradient(45deg, #15a29d 0%, #0088bc 100%);
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #15a29d), color-stop(100%, #0088bc));
-  background: -webkit-linear-gradient(45deg, #15a29d 0%, #0088bc 100%);
-  background: -o-linear-gradient(45deg, #15a29d 0%, #0088bc 100%);
-  background: -ms-linear-gradient(45deg, #15a29d 0%, #0088bc 100%);
-  background: linear-gradient(45deg, #15a29d 0%, #0088bc 100%); }
-
-.blurry {
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px); }
-
-.content {
-  margin: 35px 0; }
-
-h1 {
-  font-size: 2.92rem;
-  line-height: 110%;
-  margin: 1.46rem 0 1.168rem 0; }
+.umfrage-formular {
+  transition: 0.3s -webkit-filter linear; }
 
 form {
   margin: 55px 0 20px; }
@@ -54,9 +32,9 @@ input[type='tel']:not(.browser-default):focus:not([readonly]),
 input[type='number']:not(.browser-default):focus:not([readonly]),
 input[type='search']:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #0088bc;
-  -webkit-box-shadow: 0 1px 0 0 #0088bc;
-  box-shadow: 0 1px 0 0 #0088bc; }
+  border-bottom: 1px solid #7dbbd8;
+  -webkit-box-shadow: 0 1px 0 0 #7dbbd8;
+  box-shadow: 0 1px 0 0 #7dbbd8; }
 
 textarea.materialize-textarea {
   padding: 10px 0 0; }
@@ -64,10 +42,41 @@ textarea.materialize-textarea {
 .material-tooltip .backdrop {
   background-color: rgba(21, 162, 157, 0.6); }
 
+.material-tooltip {
+  width: 20%;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3; }
+
 form label {
   float: left;
   margin-right: 10px;
   line-height: 22px; }
+
+.umfrage-formular {
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s; }
+
+.umfrage-formular.blurry {
+  -moz-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95); }
 
 .umfrage-formular i {
   color: #9e9e9e;
@@ -82,7 +91,7 @@ form label {
 .umfrage-formular i:hover,
 .umfrage-formular i:focus,
 .umfrage-formular i:active {
-  color: #0088bc; }
+  color: #7dbbd8; }
 
 .umfrage-formular button i,
 .umfrage-formular button i:hover,
@@ -119,3 +128,33 @@ form label {
   border-color: red;
   -webkit-box-shadow: 0 1px 0 0 red;
   box-shadow: 0 1px 0 0 red; }
+
+.review {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0 20%;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out 0.3s;
+  -moz-transition: opacity 0.3s ease-in-out 0.3s;
+  -o-transition: opacity 0.3s ease-in-out 0.3s;
+  -ms-transition: opacity 0.3s ease-in-out 0.3s;
+  transition: opacity 0.3s ease-in-out 0.3s; }
+
+.review > .gradient {
+  height: 100%;
+  position: absolute;
+  width: 60%;
+  border-radius: 2px;
+  z-index: 1; }
+
+.form-review {
+  position: relative;
+  z-index: 10;
+  color: #fff;
+  padding: 50px 0 30px; }
+
+.form-fields {
+  margin-bottom: 50px;
+  text-shadow: 0px 2px 2px rgba(54, 124, 158, 0.6); }

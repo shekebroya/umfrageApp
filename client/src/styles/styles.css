@@ -1,12 +1,44 @@
 .gradient {
   opacity: 0.6;
-  background: #15a29d;
-  background: -moz-linear-gradient(45deg, #15a29d 0%, #0088bc 100%);
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #15a29d), color-stop(100%, #0088bc));
-  background: -webkit-linear-gradient(45deg, #15a29d 0%, #0088bc 100%);
-  background: -o-linear-gradient(45deg, #15a29d 0%, #0088bc 100%);
-  background: -ms-linear-gradient(45deg, #15a29d 0%, #0088bc 100%);
-  background: linear-gradient(45deg, #15a29d 0%, #0088bc 100%); }
+  background: #569cbd;
+  background: -moz-linear-gradient(45deg, #569cbd 0%, #7dbbd8 100%);
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #569cbd), color-stop(100%, #7dbbd8));
+  background: -webkit-linear-gradient(45deg, #569cbd 0%, #7dbbd8 100%);
+  background: -o-linear-gradient(45deg, #569cbd 0%, #7dbbd8 100%);
+  background: -ms-linear-gradient(45deg, #569cbd 0%, #7dbbd8 100%);
+  background: linear-gradient(45deg, #569cbd 0%, #7dbbd8 100%); }
+
+.btn-flat {
+  color: #ffffff; }
+
+.btn:hover,
+.btn-flat:hover,
+.btn-large:hover,
+.btn:focus,
+.btn-large:focus,
+.btn-floating:focus {
+  background-color: #367c9e; }
+
+.z-depth-1,
+nav,
+.card-panel,
+.card,
+.toast,
+.btn,
+.btn-large,
+.btn-floating,
+.dropdown-content,
+.collapsible,
+.side-nav {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
+
+.z-depth-1-half,
+.btn:hover,
+.btn-large:hover,
+.btn-floating:hover {
+  -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2); }
 
 .blurry {
   -webkit-filter: blur(5px);
@@ -16,9 +48,16 @@
   filter: blur(5px); }
 
 .content {
+  position: relative;
   margin: 35px 0; }
+
+.dark-blue {
+  background-color: #569cbd; }
 
 h1 {
   font-size: 2.92rem;
   line-height: 110%;
   margin: 1.46rem 0 1.168rem 0; }
+
+h4 {
+  font-size: 1.8rem; }

@@ -4,36 +4,13 @@ import { connect } from 'react-redux';
 
 class Footer extends Component {
   renderContent() {
-    console.log('props.auth', this.props.auth);
-
     switch (this.props.auth) {
       case null:
         return;
       case false:
-        return (
-          <div className="row">
-            <div className="col s6">col s6</div>
-            <div className="col s6">col s6</div>
-          </div>
-        );
+        return <div className="row" />;
       default:
-        return (
-          <div className="row">
-            <div className="col m3 s6">
-              <h4>{this.props.auth.firstname}</h4>
-            </div>
-            <div className="col m3 s6">
-              <p>email: {this.props.auth.emails.value}</p>
-            </div>
-            <div className="col m3 s6">{this.props.auth.gender}</div>
-            <div className="col m3 s6">
-              <img
-                src={this.props.auth.picture}
-                alt={this.props.auth.firstname}
-              />
-            </div>
-          </div>
-        );
+        return <div className="row" />;
     }
   }
   render() {

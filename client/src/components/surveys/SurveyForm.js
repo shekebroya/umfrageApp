@@ -69,7 +69,7 @@ class SurveyForm extends Component {
                 <Link
                   to="/umfragen"
                   type="cancel"
-                  className="waves-effect waves-light btn gradient left"
+                  className="waves-effect waves-light btn-flat dark-blue left"
                 >
                   <i className="material-icons left">cancel</i>Abbrechen
                 </Link>
@@ -77,7 +77,7 @@ class SurveyForm extends Component {
               <div className="col s6">
                 <button
                   type="submit"
-                  className="waves-effect waves-light btn gradient right"
+                  className="waves-effect waves-light btn-flat dark-blue right"
                 >
                   <i className="material-icons left">save</i>Speichern
                 </button>

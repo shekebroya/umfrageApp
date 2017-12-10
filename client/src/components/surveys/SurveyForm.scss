@@ -1,5 +1,9 @@
-@import 'styles/styles.scss';
+@import 'styles/_mixin.scss';
+@import 'styles/_variables.scss';
 
+.umfrage-formular {
+  transition: 0.3s -webkit-filter linear;
+}
 form {
   margin: 55px 0 20px;
 }
@@ -44,10 +48,30 @@ textarea.materialize-textarea {
 .material-tooltip .backdrop {
   background-color: $grey-light;
 }
+.material-tooltip {
+  width: 20%;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  // Non standard for webkit
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+}
 form label {
   float: left;
   margin-right: 10px;
   line-height: 22px;
+}
+.umfrage-formular {
+  @include scale(1);
+  @include transition(all , 0.3s, ease-in-out, 0s);
+}
+.umfrage-formular.blurry {
+  @include scale(0.95);
 }
 .umfrage-formular i {
   color: #9e9e9e;
@@ -91,4 +115,31 @@ form label {
   border-color: red;
   -webkit-box-shadow: 0 1px 0 0 red;
   box-shadow: 0 1px 0 0 red;
+}
+.review {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0 20%;
+  opacity: 1;
+  @include transition(opacity, 0.3s, ease-in-out, 0.3s);
+}
+
+.review > .gradient {
+  height: 100%;
+  position: absolute;
+  width: 60%;
+  border-radius: 2px;
+  z-index: 1;
+}
+.form-review {
+  position: relative;
+  z-index: 10;
+  color: #fff;
+  padding: 50px 0 30px;
+}
+.form-fields {
+  margin-bottom: 50px;
+  text-shadow: 0px 2px 2px rgba(54, 124, 158, 0.6);
 }
