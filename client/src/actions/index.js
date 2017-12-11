@@ -10,9 +10,10 @@ export const fetchUser = () =>
 
     dispatch({ type: FETCH_USER, payload: res.data }); // (res ist die Ausgabe von axios (Backend-server)) erst jetzt wird die Action versendet.
   };
-
-export const submitSurvey = values => async dispatch => {
+// history (withRouter) from react-router-dom
+export const submitSurvey = (values, history) => async dispatch => {
   const res = await axios.post('/api/umfragen', values);
 
+  history.push('/umfragen');
   dispatch({ type: FETCH_USER, payload: res.data });
 };

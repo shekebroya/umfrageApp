@@ -13,6 +13,13 @@
     opacity: 0.6; }
   .header .row {
     margin-bottom: 0; }
+  .header i {
+    font-style: normal; }
+  .header i.medium {
+    font-size: 2.5rem; }
+
+.header__logo {
+  margin-top: 16px; }
 
 .header__logo__link {
   float: left; }
