@@ -21,7 +21,7 @@ class App extends Component {
           <Header />
           <Route exact path="/" component={Landingpage} />
           <Route exact path="/umfragen" component={Dashboard} />
-          <Route path="/umfragen/neue-umfrage" component={SurveyNew} />
+          <Route path="/umfragen/umfrage-erstellen" component={SurveyNew} />
           <Footer />
         </div>
       </BrowserRouter>

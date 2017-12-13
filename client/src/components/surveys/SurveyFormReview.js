@@ -37,7 +37,7 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
               <div className="row">
                 <div className="col s12 m6">
                   <button
-                    className="waves-effect waves-light btn dark-blue left"
+                    className="waves-effect waves-light btn-flat dark-blue left"
                     onClick={onCancel}
                   >
                     <i className="material-icons left">arrow_back</i>Bearbeiten
@@ -46,7 +46,7 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
                 <div className="col s12 m6">
                   <button
                     onClick={() => submitSurvey(formValues, history)}
-                    className="waves-effect waves-light btn dark-blue left"
+                    className="waves-effect waves-light btn-flat dark-blue left"
                   >
                     <i className="material-icons left">email</i>Senden
                   </button>
