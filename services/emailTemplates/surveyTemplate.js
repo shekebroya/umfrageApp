@@ -275,10 +275,14 @@ module.exports = survey => {
                                               <h2>${survey.title}</h2>
                                               <div><a href="${
                                                 keys.redirectDomain
-                                              }/api/feedback/danke">ja</a></div>
+                                              }/api/feedback/${
+    survey.id
+  }/ja">ja</a></div>
                                               <div><a href="${
                                                 keys.redirectDomain
-                                              }/api/feedback/danke">nein</a></div>
+                                              }/api/feedback/${
+    survey.id
+  }/nein">nein</a></div>
                                           </td>
                                       </tr>
                                   </table>
