@@ -14,19 +14,23 @@ module.exports = app => {
   });
   app.post('/api/feedback/webhook', (req, res) => {
     const p = new Path('/api/feedback/:surveyId/:choice');
-    const events = _.map(req.body, ({ email, url }) => {
-      const match = p.test(new URL(url).pathname);
-      if (match) {
-        return {
-          email,
-          surveyId: match.surveyId,
-          choice: match.choice
-        };
-      }
-    });
-    const compactEvents = _.compact(events);
-    const uniqueEvents = _.uniqBy(compactEvents, 'email', 'surveyId');
-    console.log('uniqueEvents', uniqueEvents);
+
+    const events = _.chain(req.body)
+      .map(({ email, url }) => {
+        const match = p.test(new URL(url).pathname);
+        if (match) {
+          return {
+            email,
+            surveyId: match.surveyId,
+            choice: match.choice
+          };
+        }
+      })
+      .compact()
+      .uniqBy('email', 'surveyId')
+      .value();
+
+    console.log('events', events);
   });
 
   app.post('/api/umfragen', requireLogin, async (req, res) => {
