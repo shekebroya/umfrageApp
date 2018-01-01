@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import SurveyList from './surveys/SurveyList';
 
 class Dashboard extends Component {
   render() {
@@ -7,7 +8,7 @@ class Dashboard extends Component {
       <div className="dashboard">
         <div className="container">
           <div className="col s12">
-            <h1>Dashboard</h1>
+            <SurveyList />
             <div className="fixed-action-btn">
               <Link
                 to="/umfragen/umfrage-erstellen"
