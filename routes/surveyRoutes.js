@@ -78,4 +78,14 @@ module.exports = app => {
       res.status(422).send(err);
     }
   });
+
+  app.delete('/api/surveys/delete/:id', async (req, res) => {
+    await Survey.deleteOne({ _id: req.params.id });
+    const surveys = await Survey.find({ _user: req.user.id })
+      .sort({ dateSent: -1 })
+      .select({
+        recipients: false
+      });
+    res.send(surveys);
+  });
 };
