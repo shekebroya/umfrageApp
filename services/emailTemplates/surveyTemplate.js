@@ -253,7 +253,7 @@ module.exports = survey => {
                                   <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templatePreheader">
                                       <tr>
                                           <td valign="top" class="preheaderContent" style="padding-top:10px; padding-right:20px; padding-bottom:10px; padding-left:20px;" mc:edit="preheader_content00">
-                                               ${survey.body}
+                                               ${survey.title}
                                           </td>
                                       </tr>
                                   </table>
@@ -273,11 +273,13 @@ module.exports = survey => {
                                               <br />
                                               <br />
                                               <h2>${survey.title}</h2>
-                                              <div><a href="${
+                                              <div>
+                                              <a href="${
                                                 keys.redirectDomain
                                               }/api/feedback/${
     survey.id
-  }/ja">ja</a></div>
+  }/ja">ja</a>
+  </div>
                                               <div><a href="${
                                                 keys.redirectDomain
                                               }/api/feedback/${

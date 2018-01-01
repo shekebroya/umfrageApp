@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_USER } from './types';
+import { FETCH_USER, FETCH_SURVEYS } from './types';
 
 // Action Creator
 export const fetchUser = () =>
@@ -16,4 +16,10 @@ export const submitSurvey = (values, history) => async dispatch => {
 
   history.push('/umfragen');
   dispatch({ type: FETCH_USER, payload: res.data });
+};
+
+export const fetchSurveys = () => async dispatch => {
+  const res = await axios.get('/api/umfragen');
+
+  dispatch({ type: FETCH_SURVEYS, payload: res.data });
 };
