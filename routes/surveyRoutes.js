@@ -17,12 +17,12 @@ module.exports = app => {
     res.send(surveys);
   });
 
-  app.get('/api/feedback/:surveyId/:choice', (req, res) => {
+  app.get('/api/umfragen/:surveyId/:choice', (req, res) => {
     res.send('Vielen Dank für das Abstimmen der Umfrage!');
   });
 
-  app.post('/api/feedback/webhook', (req, res) => {
-    const p = new Path('/api/feedback/:surveyId/:choice');
+  app.post('/api/umfragen/webhook', (req, res) => {
+    const p = new Path('/api/umfragen/:surveyId/:choice');
 
     _.chain(req.body)
       .map(({ email, url }) => {
@@ -53,6 +53,8 @@ module.exports = app => {
         ).exec();
       })
       .value();
+
+    res.send({});
   });
 
   app.post('/api/umfragen', requireLogin, async (req, res) => {
@@ -79,7 +81,7 @@ module.exports = app => {
     }
   });
 
-  app.delete('/api/surveys/delete/:id', async (req, res) => {
+  app.delete('/api/umfragen/delete/:id', async (req, res) => {
     await Survey.deleteOne({ _id: req.params.id });
     const surveys = await Survey.find({ _user: req.user.id })
       .sort({ dateSent: -1 })

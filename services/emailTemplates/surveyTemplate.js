@@ -276,13 +276,13 @@ module.exports = survey => {
                                               <div>
                                               <a href="${
                                                 keys.redirectDomain
-                                              }/api/feedback/${
+                                              }/api/umfragen/${
     survey.id
   }/ja">ja</a>
   </div>
                                               <div><a href="${
                                                 keys.redirectDomain
-                                              }/api/feedback/${
+                                              }/api/umfragen/${
     survey.id
   }/nein">nein</a></div>
                                           </td>
