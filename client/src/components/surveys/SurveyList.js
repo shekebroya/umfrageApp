@@ -19,8 +19,8 @@ class SurveyList extends Component {
             </p>
           </div>
           <div className="card-action">
-            <a>Ja: {survey.yes}</a>
-            <a>Nein: {survey.no}</a>
+            <a>Ja: {survey.ja}</a>
+            <a>Nein: {survey.nein}</a>
             <button
               onClick={() => this.props.deleteSurvey(survey._id)}
               className="btn gradient right"
