@@ -22,17 +22,11 @@ module.exports = app => {
   });
 
   app.post('/api/umfragen/webhook', (req, res) => {
-    const p = new Path('/api/umfragen/:surveyId/:choice');
-
     _.chain(req.body)
       .map(({ email, url }) => {
         const match = p.test(new URL(url).pathname);
         if (match) {
-          return {
-            email,
-            surveyId: match.surveyId,
-            choice: match.choice
-          };
+          return { email, surveyId: match.surveyId, choice: match.choice };
         }
       })
       .compact()
@@ -50,7 +44,7 @@ module.exports = app => {
             $set: { 'recipients.$.responded': true },
             lastResponded: new Date()
           }
-        ).exec();
+        ).then(result => console.log(result));
       })
       .value();
 
