@@ -44,7 +44,7 @@ module.exports = app => {
             $set: { 'recipients.$.responded': true },
             lastResponded: new Date()
           }
-        ).then(result => console.log(result));
+        ).exec();
       })
       .value();
 
