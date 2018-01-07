@@ -22,6 +22,8 @@ module.exports = app => {
   });
 
   app.post('/api/umfragen/webhook', (req, res) => {
+    const p = new Path('/api/umfragen/:surveyId/:choice');
+
     _.chain(req.body)
       .map(({ email, url }) => {
         const match = p.test(new URL(url).pathname);
