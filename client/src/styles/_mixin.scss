@@ -74,7 +74,11 @@
   transition: $prop $time $ease $delay, $prop1 $time1 $ease1 $delay1,
     $prop2 $time2 $ease2 $delay2;
 }
-
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
 // Flexbox display
 @mixin flexbox() {
   display: -webkit-box;
