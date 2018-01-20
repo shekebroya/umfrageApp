@@ -1,6 +1,6 @@
-.footer {
+footer {
   color: #fff; }
-  .footer a {
+  footer a {
     color: #fff;
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out 0s;
@@ -8,7 +8,10 @@
     -o-transition: opacity 0.2s ease-in-out 0s;
     -ms-transition: opacity 0.2s ease-in-out 0s;
     transition: opacity 0.2s ease-in-out 0s; }
-  .footer a:hover {
+  footer a:hover {
     opacity: 0.6; }
-  .footer .row {
-    margin-bottom: 0; }
+  footer li {
+    margin-bottom: 5px;
+    font-size: 15px; }
+  footer i.tiny {
+    font-size: 1.4rem; }

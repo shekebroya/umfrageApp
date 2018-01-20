@@ -40,13 +40,6 @@
   -ms-filter: blur($prop);
   filter: blur($prop);
 }
-@mixin rotate($prop) {
-  -webkit-transform: rotate($prop);
-  -moz-transform: rotate($prop);
-  -o-transform: rotate($prop);
-  -ms-transform: rotate($prop);
-  transform: rotate($prop);
-}
 
 @mixin transition($prop, $time, $ease, $delay) {
   -webkit-transition: $prop $time $ease $delay;
@@ -61,18 +54,6 @@
   -o-transition: $prop $time $ease $delay, $prop1 $time1 $ease1 $delay1;
   -ms-transition: $prop $time $ease $delay, $prop1 $time1 $ease1 $delay1;
   transition: $prop $time $ease $delay, $prop1 $time1 $ease1 $delay1;
-}
-@mixin transition3($prop, $time, $ease, $delay, $prop1, $time1, $ease1, $delay1, $prop2, $time2, $ease2, $delay2) {
-  -webkit-transition: $prop $time $ease $delay, $prop1 $time1 $ease1 $delay1,
-    $prop2 $time2 $ease2 $delay2;
-  -moz-transition: $prop $time $ease $delay, $prop1 $time1 $ease1 $delay1,
-    $prop2 $time2 $ease2 $delay2;
-  -o-transition: $prop $time $ease $delay, $prop1 $time1 $ease1 $delay1,
-    $prop2 $time2 $ease2 $delay2;
-  -ms-transition: $prop $time $ease $delay, $prop1 $time1 $ease1 $delay1,
-    $prop2 $time2 $ease2 $delay2;
-  transition: $prop $time $ease $delay, $prop1 $time1 $ease1 $delay1,
-    $prop2 $time2 $ease2 $delay2;
 }
 @mixin calc($property, $expression) {
   #{$property}: -moz-calc(#{$expression});

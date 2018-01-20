@@ -6,27 +6,10 @@ class SurveyList extends Component {
   componentDidMount() {
     this.props.fetchSurveys();
   }
-  state = { sortByDate: true, sortByTitle: false };
-
-  handleSort = () => {
-    this.setState({ sortByDate: false, sortByTitle: true });
-    console.log(this.state.sortByDate);
-    this.props.surveys.map(survey => {
-      return console.log(new Date(survey.dateSent));
-    });
-  };
   renderSurveys() {
     return this.props.surveys.map(survey => {
       return (
-        <div
-          className="card darken-1"
-          key={survey._id}
-          datakey={
-            this.state.sortByDate
-              ? new Date(survey.dateSent).toISOString().slice(0, 10)
-              : survey.title
-          }
-        >
+        <div className="card darken-1" key={survey._id}>
           <div className="card-content">
             <span className="card-title">{survey.title}</span>
             <p>{survey.body}</p>
@@ -51,14 +34,7 @@ class SurveyList extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <div className="sorting">
-          <button onClick={this.handleSort}>Click Me</button>
-        </div>
-        {this.renderSurveys()}
-      </div>
-    );
+    return <div>{this.renderSurveys()}</div>;
   }
 }
 

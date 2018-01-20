@@ -267,12 +267,13 @@ module.exports = survey => {
                                   <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
                                       <tr>
                                           <td valign="top" class="bodyContent" mc:edit="body_content">
-                                              <h1>Beispiel-Umfrage, jede Meinung zählt.</h1>
-                                              <h3>Bitte beantworten Sie die folgende Frage</h3>
+                                            <h2>${survey.title}</h2>
+                                            <br />
+                                            <br />
                                               <div>${survey.body}</div>
                                               <br />
                                               <br />
-                                              <h2>${survey.title}</h2>
+
                                               <div>
                                               <a href="${
                                                 keys.redirectDomain

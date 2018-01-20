@@ -65,7 +65,7 @@ class SurveyForm extends Component {
           {this.renderFields()}
           <div className="form-buttons">
             <div className="row">
-              <div className="col s6">
+              <div className="col s12 m6">
                 <Link
                   to="/umfragen"
                   type="cancel"
@@ -74,12 +74,12 @@ class SurveyForm extends Component {
                   <i className="material-icons left">cancel</i>Abbrechen
                 </Link>
               </div>
-              <div className="col s6">
+              <div className="col s12 m6">
                 <button
                   type="submit"
                   className="waves-effect waves-light btn-flat dark-blue right"
                 >
-                  <i className="material-icons left">save</i>Speichern
+                  Speichern<i className="material-icons right">save</i>
                 </button>
               </div>
             </div>

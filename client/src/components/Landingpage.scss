@@ -4,21 +4,13 @@
 .landingpage {
   padding: 60px 0;
   h1 {
-    margin: 0 10px 50px 10px;
-    background-color: $dark-blue;
-    color: white;
+    margin: 0 10px 20px 10px;
     padding: 30px;
   }
   h2 {
-    margin: 50px 10px 30px 10px;
-    background-color: $blue;
-    color: white;
+    margin: 50px 10px 20px 10px;
     padding: 30px;
     font-size: 2.5rem;
-  }
-  .material-icons {
-    font-size: 55px;
-    color: $dark-blue;
   }
   .flex-container {
     @include flexbox;
@@ -31,18 +23,21 @@
     margin: 10px;
     @include calc( width, '50% - 20px');
     padding: 30px;
+    border-radius: 2px;
     border: 1px solid $light-blue;
   }
+  .material-icons {
+    font-size: 100px;
+    color: $light-blue;
+  }
+  .flex-item:first-child {
+    border: 1px solid $dark-blue;
+  }
+  .flex-item:first-child .material-icons {
+    color: $dark-blue;
+  }
 }
-thead {
-  border-bottom: 1px solid $light-blue;
-}
-thead tr {
-  background-color: #e3edf7;
-}
-tbody tr:nth-child(odd) {
-  background-color: #f9fafb;
-}
+
 @media screen and (max-width: 601px) {
   .landingpage {
     .flex-item {

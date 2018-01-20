@@ -6,7 +6,7 @@ import * as actions from '../../actions';
 const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
   return (
     <div className="review review-active">
-      <div className="gradient"> </div>
+      <div className="background-overlay"> </div>
       <div className="form-review">
         <div className="container">
           <div className="email-review">
@@ -48,7 +48,7 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
                     onClick={() => submitSurvey(formValues, history)}
                     className="waves-effect waves-light btn-flat dark-blue left"
                   >
-                    <i className="material-icons left">email</i>Senden
+                    Senden<i className="material-icons right">send</i>
                   </button>
                 </div>
               </div>

@@ -1,12 +1,15 @@
+body {
+  font-size: 16px; }
+
 .gradient {
-  opacity: 0.6;
+  opacity: 0.7;
   background: #569cbd;
-  background: -moz-linear-gradient(45deg, #569cbd 0%, #7dbbd8 100%);
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #569cbd), color-stop(100%, #7dbbd8));
-  background: -webkit-linear-gradient(45deg, #569cbd 0%, #7dbbd8 100%);
-  background: -o-linear-gradient(45deg, #569cbd 0%, #7dbbd8 100%);
-  background: -ms-linear-gradient(45deg, #569cbd 0%, #7dbbd8 100%);
-  background: linear-gradient(45deg, #569cbd 0%, #7dbbd8 100%); }
+  background: -moz-linear-gradient(45deg, #569cbd 0%, #367c9e 100%);
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #569cbd), color-stop(100%, #367c9e));
+  background: -webkit-linear-gradient(45deg, #569cbd 0%, #367c9e 100%);
+  background: -o-linear-gradient(45deg, #569cbd 0%, #367c9e 100%);
+  background: -ms-linear-gradient(45deg, #569cbd 0%, #367c9e 100%);
+  background: linear-gradient(45deg, #569cbd 0%, #367c9e 100%); }
 
 .btn-flat {
   color: #ffffff; }
@@ -49,8 +52,10 @@ nav,
 
 .content {
   position: relative;
-  margin: 35px 0;
   font-size: 16px; }
+
+.content > div:first-child {
+  padding: 35px 0; }
 
 .dark-blue {
   background-color: #569cbd; }
@@ -62,3 +67,22 @@ h1 {
 
 h4 {
   font-size: 1.8rem; }
+
+thead {
+  border-bottom: 1px solid #abd7ed; }
+
+thead tr {
+  background-color: #e3edf7; }
+
+tbody tr:nth-child(odd) {
+  background-color: #f9fafb; }
+
+td,
+th {
+  padding: 30px 20px; }
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 110%;
+    margin: 1rem 0 1rem 0; } }

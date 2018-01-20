@@ -1,19 +1,12 @@
 .landingpage {
   padding: 60px 0; }
   .landingpage h1 {
-    margin: 0 10px 50px 10px;
-    background-color: #569cbd;
-    color: white;
+    margin: 0 10px 20px 10px;
     padding: 30px; }
   .landingpage h2 {
-    margin: 50px 10px 30px 10px;
-    background-color: #7dbbd8;
-    color: white;
+    margin: 50px 10px 20px 10px;
     padding: 30px;
     font-size: 2.5rem; }
-  .landingpage .material-icons {
-    font-size: 55px;
-    color: #569cbd; }
   .landingpage .flex-container {
     display: -webkit-box;
     display: -moz-box;
@@ -43,16 +36,15 @@
     width: -webkit-calc(50% - 20px);
     width: calc(50% - 20px);
     padding: 30px;
+    border-radius: 2px;
     border: 1px solid #abd7ed; }
-
-thead {
-  border-bottom: 1px solid #abd7ed; }
-
-thead tr {
-  background-color: #e3edf7; }
-
-tbody tr:nth-child(odd) {
-  background-color: #f9fafb; }
+  .landingpage .material-icons {
+    font-size: 100px;
+    color: #abd7ed; }
+  .landingpage .flex-item:first-child {
+    border: 1px solid #569cbd; }
+  .landingpage .flex-item:first-child .material-icons {
+    color: #569cbd; }
 
 @media screen and (max-width: 601px) {
   .landingpage .flex-item {

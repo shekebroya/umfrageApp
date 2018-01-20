@@ -46,7 +46,7 @@ class Landingpage extends Component {
             </div>
           </div>
           <h2 className="center">Anleitung zum Erstellen einer Umfragemail</h2>
-          <table className="centered responsive-table">
+          <table className="tutorial-table">
             <thead>
               <tr>
                 <th>Was gehört in eine Umfragemail? </th>

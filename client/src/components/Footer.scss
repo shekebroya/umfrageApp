@@ -1,7 +1,7 @@
 @import 'styles/_mixin.scss';
 @import 'styles/_variables.scss';
 
-.footer {
+footer {
   color: $white;
   a {
     color: $white;
@@ -11,7 +11,11 @@
   a:hover {
     opacity: 0.6;
   }
-  .row {
-    margin-bottom: 0;
+  li {
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+  i.tiny {
+    font-size: 1.4rem;
   }
 }
