@@ -18,15 +18,30 @@ class SurveyList extends Component {
             </p>
           </div>
           <div className="card-action">
-            <a>Ja: {survey.ja}</a>
-            <a>Nein: {survey.nein}</a>
-            <button
-              onClick={() => this.props.deleteSurvey(survey._id)}
-              className="btn gradient right"
-            >
-              <i className="small material-icons">delete</i>
-              Löschen
-            </button>
+            <div className="row">
+              <div className="col s12 m6">
+                <div className="feedbacks">
+                  <p>Abgestimmt mit</p>
+                  <div className="feedback">
+                    <strong className="darkest-blue">Ja: {survey.ja}</strong>
+                  </div>
+                  <div className="feedback">
+                    <strong className="darkest-blue">
+                      Nein: {survey.nein}
+                    </strong>
+                  </div>
+                </div>
+              </div>
+              <div className="col s12 m6">
+                <button
+                  onClick={() => this.props.deleteSurvey(survey._id)}
+                  className="waves-effect waves-light btn-flat dark-blue right"
+                >
+                  <i className="material-icons right">delete</i>
+                  Löschen
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       );
@@ -34,7 +49,19 @@ class SurveyList extends Component {
   }
 
   render() {
-    return <div>{this.renderSurveys()}</div>;
+    if (this.props.surveys.length > 0) {
+      return <div>{this.renderSurveys()}</div>;
+    }
+    return (
+      <div>
+        <h1>Erstellen Sie Ihre erste Umfrage</h1>
+        <p>
+          Um eine Umfrage zu erstellen müssen Sie rechts auf
+          <i className="material-icons">add_circle</i>
+          drücken, das Formular ausfüllen und versenden.
+        </p>
+      </div>
+    );
   }
 }
 

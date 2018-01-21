@@ -21,7 +21,7 @@ class Footer extends Component {
               </li>
               <li>
                 <a className="grey-text text-lighten-4" href="/umfragen">
-                  <i className="material-icons tiny left">apps</i>Umfragen
+                  <i className="material-icons tiny left">apps</i>Meine Umfragen
                 </a>
               </li>
               <li>
@@ -29,8 +29,8 @@ class Footer extends Component {
                   className="grey-text text-lighten-4"
                   href="/umfragen/umfrage-erstellen"
                 >
-                  <i className="material-icons tiny left">add_circle</i>Umfrage
-                  erstellen
+                  <i className="material-icons tiny left">add_circle</i>Neue
+                  Umfrage erstellen
                 </a>
               </li>
             </ul>
